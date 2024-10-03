@@ -1,0 +1,18 @@
+.DropDownList label{
+/*Break the line --> not side by side*/
+display: block;
+margin-bottom: 8px;
+font-size: 24px;
+}
+
+.DropDownList select{
+    background-color:#fff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.0); 
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    padding: 24px;
+   /* 100 % view and not consider padding value*/
+   /*I wnat to give 100% with size, padding etc */
+   box-sizing: border-box;
+}
