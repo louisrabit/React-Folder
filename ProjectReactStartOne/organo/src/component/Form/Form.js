@@ -16,13 +16,55 @@ const Times = [
   "Manager",
 ]
 
-    return (
+
+// value 
+// set to define the value 
+// value and state , change at same time --> both 
+const [name, setName]  = useState('')
+const [position, setPosition]  = useState('')
+const [image, setImage]  = useState('')
+
+
+const submitFunction = (event) => {
+    // to prevent page to reload
+event.preventDefault();
+    console.log("Button Clicked => ", name, position, image)
+}
+
+
+
+
+    return ( 
         <section className="form">
-            <form>
+            <form onSubmit={submitFunction}>
                 <h2>Collaborator Details Form</h2>
-                <TextField label="Name" placeholder="Input Name" />
-                <TextField label="Position" placeholder="Position" />
-                <TextField label="Image" placeholder="Input Image" />
+                <TextField 
+                 mandatory={true}  
+                 label="Name" 
+                 placeholder="Input Name"
+                 value ={name}
+                 chngedFiled={value => setName(value)}
+                 />
+
+
+
+                <TextField
+                 mandatory={true} 
+                 label="Position" 
+                 placeholder="Position" 
+                 value ={position}
+                 chngedFiled={value => setPosition(value)}
+                 />
+
+
+                <TextField
+                 label="Image" 
+                 placeholder="Input Image" 
+                 value ={image}
+                 chngedFiled={value => setImage(value)}
+                 
+                 
+                 />
                 <List label="Team" items={Times}/>
                 {/* <Button name="Create Card"/> */}
                 <Button>

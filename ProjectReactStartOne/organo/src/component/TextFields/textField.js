@@ -3,11 +3,23 @@
 // more organized -
 import './textField.css';
 
+import {useState} from 'react'
+
 //props = properties --> variable
 const TextField = (props) => {
     // console.log(props)
 
 const modifyPlaceholder = `${props.placeholder}...`
+
+
+// // value 
+// // set to define the value 
+// // value and state , change at same time --> both 
+// const [valor, setValor]  = useState('Luis')
+
+const onChange = (event) => {
+    props.chngedFiled(event.target.value)
+}
 
 return(
 
@@ -15,7 +27,7 @@ return(
 <div className="field-text">
     <label>{props.label}</label>
     {/* <input placeholder={props.placeholder}/> */}
-    <input placeholder={modifyPlaceholder}/>
+    <input value={props.valor} onChange={onChange} required={props.mandatory} placeholder={modifyPlaceholder}/>
 </div>
 
 
