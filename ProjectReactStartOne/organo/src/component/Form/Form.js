@@ -2,9 +2,9 @@ import Button from '../Button/Index';
 import List from '../List/List';
 import TextField from '../TextFields/textField';
 import './Form.css';
+import { useState } from 'react';
 
-
-const Form = () => {
+const Form = (props) => {
 
 const Times = [
   "Proggramming",
@@ -23,17 +23,23 @@ const Times = [
 const [name, setName]  = useState('')
 const [position, setPosition]  = useState('')
 const [image, setImage]  = useState('')
+const [team, setTeam]  = useState('')
+
+
 
 
 const submitFunction = (event) => {
     // to prevent page to reload
 event.preventDefault();
-    console.log("Button Clicked => ", name, position, image)
+//     console.log("Button Clicked => ", name, position, image, team)
+props.objectData({
+    name,
+    position,
+    image,
+    team
+})
+
 }
-
-
-
-
     return ( 
         <section className="form">
             <form onSubmit={submitFunction}>
@@ -65,7 +71,12 @@ event.preventDefault();
                  
                  
                  />
-                <List label="Team" items={Times}/>
+                <List 
+                label="Team"
+                 items={Times}
+                 value ={team}
+                 chngedFiled={value => setTeam(value)}
+                 />
                 {/* <Button name="Create Card"/> */}
                 <Button>
                     Create Card

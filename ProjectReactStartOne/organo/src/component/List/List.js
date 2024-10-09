@@ -8,7 +8,11 @@ const List = (props) => {
     return (
         <div className="DropDownList">
             <label>{props.label}</label>
-            <select>
+            <select 
+             required={props.required} 
+             value = {props.value}
+             onChange={event => props.chngedFiled(event.target.value)}
+             >
                
                     {/* para cada item retorna uma opçao */}
 
