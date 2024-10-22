@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Banner from './component/Banner/banner';
 import Form from './component/Form/Form';
-import Time from './component/Time/index';
+import Time from './component/Time';
 
 function App() {
 
@@ -51,6 +51,13 @@ const newPersonObject = (personObject) => {
       <Banner />
       
       <Form objectData = {personObject => newPersonObject(personObject)} />
+      {teams.map(teamUser =>
+       <Time key={teamUser.name}
+       name={teamUser.name} 
+       corPrimaria={teamUser.corPrimaria}
+       corSecundaria={teamUser.corSecundaria}
+       /> )}
+   
    
     
      {teams.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} />)}
