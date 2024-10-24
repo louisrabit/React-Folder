@@ -3,8 +3,8 @@ import './Time.css';
 
 const Time = (props) => {
 
-    const secndaryColor = {backgroundColor: props.corSecundaria};
-     const primaryColor = {borderColor: props.corPrimaria}
+    const secndaryColor = {backgroundColor: props.secndaryColor};
+     const primaryColor = {borderColor: props.primaryColor}
 
 
     return (

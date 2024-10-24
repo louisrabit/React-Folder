@@ -10,34 +10,34 @@ const [persons, setPersons] = useState([])
 
 const teams = [
   {
-    nome: 'Front-End',
-    corPrimaria: '#82CFFA',
-    corSecundaria: '#E8F8FF',
+    name: 'Front-End',
+    primaryColor: '#82CFFA',
+    secndaryColor: '#E8F8FF',
 },
 {
-    nome: 'Data Science',
-    corPrimaria: '#A6D157',
-    corSecundaria: '#F0F8E2',
+  name: 'Data Science',
+  primaryColor: '#A6D157',
+  secndaryColor: '#F0F8E2',
 },
 {
-    nome: 'Devops',
-    corPrimaria: '#E06B69',
-    corSecundaria: '#FDE7E8',
+  name: 'Devops',
+  primaryColor: '#E06B69',
+  secndaryColor: '#FDE7E8',
 },
 {
-    nome: 'UX e Design',
-    corPrimaria: '#D86EBF',
-    corSecundaria: '#FAE5F5',
+  name: 'UX e Design',
+  primaryColor: '#D86EBF',
+  secndaryColor: '#FAE5F5',
 },
 {
-    nome: 'Mobile',
-    corPrimaria: '#FEBA05',
-    corSecundaria: '#FFF5D9',
+  name: 'Mobile',
+  primaryColor: '#FEBA05',
+  secndaryColor: '#FFF5D9',
 },
 {
-    nome: 'Inovação e Gestão',
-    corPrimaria: '#FF8A29',
-    corSecundaria: '#FFEEDF',
+  name: 'Inovação e Gestão',
+  primaryColor: '#FF8A29',
+  secndaryColor: '#FFEEDF',
 }
 ]
 
@@ -50,17 +50,17 @@ const newPersonObject = (personObject) => {
     <div className="App">
       <Banner />
       
-      <Form objectData = {personObject => newPersonObject(personObject)} />
+      <Form  teamsName={teams.map(time => time.name)} objectData = {personObject => newPersonObject(personObject)} />
       {teams.map(teamUser =>
        <Time key={teamUser.name}
        name={teamUser.name} 
-       corPrimaria={teamUser.corPrimaria}
-       corSecundaria={teamUser.corSecundaria}
+       primaryColor={teamUser.primaryColor}
+       secndaryColor={teamUser.secndaryColor}
        /> )}
    
    
     
-     {teams.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} />)}
+    
 
 
 

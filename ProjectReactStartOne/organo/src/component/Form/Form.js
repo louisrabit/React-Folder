@@ -6,15 +6,7 @@ import { useState } from 'react';
 
 const Form = (props) => {
 
-  const teams = [
-    "Programming",
-    "Front-end",
-    "Data Science",
-    "Devops",
-    "UX & Design",
-    "Mobile",
-    "Manager",
-  ];
+
 
   // State variables
   const [name, setName] = useState('');
@@ -68,7 +60,7 @@ const Form = (props) => {
         {/* Team Select */}
         <List 
           label="Team"
-          items={teams}
+          items={props.teamsName}
           value={team}
           onChange={value => setTeam(value)}
         />
