@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Banner from './component/Banner/banner';
 import Form from './component/Form/Form';
 import Time from './component/Time';
+import Employer from './component/Emplyer';
 
 function App() {
 
@@ -56,6 +57,7 @@ const newPersonObject = (personObject) => {
        name={teamUser.name} 
        primaryColor={teamUser.primaryColor}
        secndaryColor={teamUser.secndaryColor}
+       persons = {persons}
        /> )}
    
    

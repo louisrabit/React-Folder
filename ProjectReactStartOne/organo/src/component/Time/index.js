@@ -11,10 +11,20 @@ const Time = (props) => {
     return (
         // <section className="time" style={{backgroundColor: props.corSecundaria}}>
         <section className="time" style={secndaryColor}>
+
         <h3 style={primaryColor}>
             {props.name}
         </h3>
-        <Employer/>
+
+        <div className='employersTeam'>
+            {props.persons.map(personObject => 
+        <Employer 
+        name={personObject.name} 
+        position={personObject.position}
+        />)}  
+        </div>
+      
+      
         </section>
     )
 }

@@ -18,7 +18,7 @@ const modifyPlaceholder = `${props.placeholder}...`
 // const [valor, setValor]  = useState('Luis')
 
 const onChange = (event) => {
-    props.chngedFiled(event.target.value)
+    props.onChange(event.target.value)
 }
 
 return(

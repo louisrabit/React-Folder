@@ -11,7 +11,7 @@ const List = (props) => {
             <select 
              required={props.required} 
              value = {props.value}
-             onChange={event => props.chngedFiled(event.target.value)}
+             onChange={event => props.onChange(event.target.value)}
              >
                
                     {/* para cada item retorna uma opçao */}
