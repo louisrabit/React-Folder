@@ -1,3 +1,4 @@
+import Employer from '../Emplyer';
 import './Time.css';
 
 
@@ -13,6 +14,7 @@ const Time = (props) => {
         <h3 style={primaryColor}>
             {props.name}
         </h3>
+        <Employer/>
         </section>
     )
 }
