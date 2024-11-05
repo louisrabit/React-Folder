@@ -22,7 +22,7 @@
 
 import './Employer.css';
 
-const Employer = ({name, image, position}) => {
+const Employer = ({name, image, position, teamUser }) => {
 return (
 
     <div className='colaborador'>

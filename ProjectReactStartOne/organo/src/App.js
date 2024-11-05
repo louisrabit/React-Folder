@@ -57,7 +57,7 @@ const newPersonObject = (personObject) => {
        name={teamUser.name} 
        primaryColor={teamUser.primaryColor}
        secndaryColor={teamUser.secndaryColor}
-       persons = {persons}
+       persons = {persons.filter(personObject => personObject.teamUser === teamUser.name)}
        /> )}
    
    

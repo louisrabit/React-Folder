@@ -17,11 +17,14 @@ const Time = (props) => {
         </h3>
 
         <div className='employersTeam'>
-            {props.persons.map(personObject => 
-        <Employer 
-        name={personObject.name} 
-        position={personObject.position}
-        />)}  
+        {props.persons.map(personObject => 
+  <Employer 
+    key={personObject.name} 
+    name={personObject.name} 
+    position={personObject.position}
+    image={personObject.image}
+  />
+)}
         </div>
       
       

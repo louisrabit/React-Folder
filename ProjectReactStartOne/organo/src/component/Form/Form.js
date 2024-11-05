@@ -12,7 +12,7 @@ const Form = (props) => {
   const [name, setName] = useState('');
   const [position, setPosition] = useState('');
   const [image, setImage] = useState('');
-  const [team, setTeam] = useState('');
+  const [teamUser, setTeamUser] = useState('');
 
   const submitFunction = (event) => {
     // Prevent page reload
@@ -22,7 +22,7 @@ const Form = (props) => {
       name,
       position,
       image,
-      team
+      teamUser
     });
   };
 
@@ -61,8 +61,8 @@ const Form = (props) => {
         <List 
           label="Team"
           items={props.teamsName}
-          value={team}
-          onChange={value => setTeam(value)}
+          value={teamUser}
+          onChange={value => setTeamUser(value)}
         />
 
         {/* Button */}
