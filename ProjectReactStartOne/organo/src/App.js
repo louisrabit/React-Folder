@@ -4,7 +4,7 @@ import Banner from './component/Banner/banner';
 import Form from './component/Form/Form';
 import Time from './component/Time';
 import Employer from './component/Emplyer';
-
+import Rodape from './component/BasePage/Rodape';
 function App() {
 
 const [persons, setPersons] = useState([])
@@ -48,24 +48,25 @@ const newPersonObject = (personObject) => {
 }
 
   return (
+
     <div className="App">
       <Banner />
       
+
       <Form  teamsName={teams.map(time => time.name)} objectData = {personObject => newPersonObject(personObject)} />
       {teams.map(teamUser =>
-       <Time key={teamUser.name}
+
+
+       <Time
+        key={teamUser.name}
        name={teamUser.name} 
        primaryColor={teamUser.primaryColor}
        secndaryColor={teamUser.secndaryColor}
        persons = {persons.filter(personObject => personObject.teamUser === teamUser.name)}
        /> )}
    
+   <Rodape/>
    
-    
-    
-
-
-
     </div>
   );
 }
